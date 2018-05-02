@@ -1,0 +1,17 @@
+@import 'font.scss';
+@import 'font_sizes.scss';
+@import 'layout.scss';
+
+html, body{
+	height: 100%; margin: 0px; padding: 0px;
+	font-family: $Open-Sans;
+}
+
+.hidden{
+	opacity: 0;
+}
+
+
+.content{
+	height: 100%;
+}

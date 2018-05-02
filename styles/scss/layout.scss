@@ -1,0 +1,68 @@
+
+
+#main_container{
+	height: 100%;
+}
+
+#header{
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	text-align: center;
+}
+
+#main_title{
+	padding: 0;
+	margin: 0;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+
+.left_container{
+	top: 0;
+	height: 100%;
+	width: 50%;
+}
+
+.right_container{
+	height: 100%;
+	width: 50%;
+	float: right;
+}
+
+#svg_container{
+
+}
+
+.relative{
+	position: relative;
+	top: 0;
+	width: 80%;
+	height: 100%;
+	padding-left: 10%; padding-right: 10%;
+}
+
+.fixed{
+	position: fixed;
+	width: 40%;
+	padding-left: 5%; padding-right: 5%;
+	height: 100%;
+	top:0;
+	left:0;
+}
+
+.wrap{
+}
+
+.centered{
+	padding: 10%;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.spaced{
+	margin-bottom: 80px;
+}
