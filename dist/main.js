@@ -41,14 +41,12 @@ document.addEventListener('DOMContentLoaded', function(){
 		//console.log('Visible element: '+this.id);
 
 		morph('empty', morphTarget);
-		dimOpacity();
 	}
 
 	scope.morphPrev = function(morphTarget){
 		//console.log(scrollDirection);
 		if(scrollDirection == 'up'){
 			morph('empty', morphTarget);
-			incOpacity();
 		}
 	}
 
