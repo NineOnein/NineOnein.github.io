@@ -1,5 +1,6 @@
+@import 'tachyons/tachyons.scss';
+
 @import 'font.scss';
-@import 'font_sizes.scss';
 @import 'layout.scss';
 
 html, body{
@@ -11,7 +12,7 @@ html, body{
 	opacity: 0;
 }
 
-
 .content{
 	height: 100%;
+	position: relative;
 }

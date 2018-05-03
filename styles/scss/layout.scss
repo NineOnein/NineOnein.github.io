@@ -4,21 +4,6 @@
 	height: 100%;
 }
 
-#header{
-	padding: 0;
-	margin: 0;
-	height: 100vh;
-	text-align: center;
-}
-
-#main_title{
-	padding: 0;
-	margin: 0;
-	position: relative;
-	top: 50%;
-	transform: translateY(-50%);
-}
-
 
 .left_container{
 	top: 0;
@@ -33,7 +18,7 @@
 }
 
 #svg_container{
-
+	
 }
 
 .relative{
@@ -53,8 +38,6 @@
 	left:0;
 }
 
-.wrap{
-}
 
 .centered{
 	padding: 10%;
@@ -63,6 +46,4 @@
 	transform: translateY(-50%);
 }
 
-.spaced{
-	margin-bottom: 80px;
-}
+
