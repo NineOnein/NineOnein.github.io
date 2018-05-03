@@ -11,28 +11,52 @@ let morph = function(sourceElementId, targetElementId){
 		st1.animate({ d: st2Points }, 2000, mina.easeinout);
 	}
 }
+let lastScrollTop = 0;
+let scrollDirection = undefined;
+// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+document.addEventListener("scroll", function(){ // or window.addEventListener("scroll"....
+   let st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+   if (st > lastScrollTop){
+       scrollDirection = 'down';
+   } else {
+      scrollDirection = 'up';
+   }
+   lastScrollTop = st;
+}, false);
+window.onbeforeunload = function () {
+	window.scrollTo(0, 0);
+}
+
 document.addEventListener('DOMContentLoaded', function(){
+
 	let scope = {};
 	let trigger = new ScrollTrigger();
 	trigger.callScope = scope;
 
-	morph('empty', 'chameleon');
+	svg_container = document.getElementById('svg_container');
 
-	scope.fixe = function(value){
-		document.getElementById('svg_container').classList.remove('relative');
-		document.getElementById('svg_container').classList.add('fixed');
-	}
+	morph('empty', 'earth');
 
-
-	scope.unfixe = function(){
-		document.getElementById('svg_container').classList.remove('fixed');
-		document.getElementById('svg_container').classList.add('relative');
-	}
-
-	scope.morph = function(value, morphTarget) {
-		console.log('Visible element: '+this.id);
-		console.log(window.pageYOffset, this.offsetTop);
+	scope.morph = function(morphTarget) {
+		//console.log('Visible element: '+this.id);
 
 		morph('empty', morphTarget);
+		dimOpacity();
+	}
+
+	scope.morphPrev = function(morphTarget){
+		//console.log(scrollDirection);
+		if(scrollDirection == 'up'){
+			morph('empty', morphTarget);
+			incOpacity();
+		}
+	}
+
+	function dimOpacity(){
+		svg_container.style.opacity = 0.2;
+	}
+
+	function incOpacity(){
+		svg_container.style.opacity = 'initial';
 	}
 });
