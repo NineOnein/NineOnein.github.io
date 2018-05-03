@@ -1,0 +1,50 @@
+#nav{
+
+}
+
+.nav_content{
+	position: fixed;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#nav ul li {
+	margin-bottom: 10px;
+}
+
+#nav_button {
+	cursor: pointer;
+}
+
+.nav_sidebar{
+	transition: transform 0.3s ease-in;
+}
+
+.nav_sidebar_hidden{
+	transform: translateX(-100%);
+}
+
+.nav_sidebar_active{
+	transform: translateX(0%);
+}
+
+.nav_sidebar_content {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#nav_overlay {
+	transition: all 0.5s;
+}
+
+.nav_overlay_hidden{
+	visibility: hidden;
+	opacity: 0;
+}
+
+.nav_overlay_active{
+	visibility: visible;
+	opacity: 1;
+}
+

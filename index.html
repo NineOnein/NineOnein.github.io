@@ -16,18 +16,32 @@
 
 <body>
 
-    <nav id="nav" class="fixed z-3">
-        <ul class="list lh-copy">
-            <li><a href="#" class="db black-50 link hover-mid-gray">Apple</a></li>
-            <li><a href="#" class="db black-50 link hover-mid-gray">Banana</a></li>
-            <li><a href="#" class="db black-50 link hover-mid-gray">Orange</a></li>
-            <li><a href="#" class="db black-50 link hover-mid-gray">Grapefruit</a></li>
-        </ul>
+    <nav id="nav">
+        <div class="nav_content dn db-l fixed z-3 pointer">
+            <ul class="list lh-copy">
+                <li><a onclick="smoothScrollTo('section_0', 2000);" class="db black-50 link hover-mid-gray">Agile Story</a></li>
+                <li><a onclick="smoothScrollTo('section_1', 2000);" class="db black-50 link hover-mid-gray">At Swisscom</a></li>
+                <li><a onclick="smoothScrollTo('section_2', 2000);" class="db black-50 link hover-mid-gray">What does Agile means</a></li>
+                <li><a onclick="smoothScrollTo('section_3', 2000);" class="db black-50 link hover-mid-gray">We needs more agility</a></li>
+                <li><a onclick="smoothScrollTo('section_4', 2000);" class="db black-50 link hover-mid-gray">Both sides of the medal</a></li>
+                <li><a onclick="smoothScrollTo('section_5', 2000);" class="db black-50 link hover-mid-gray">Being Agile</a></li>
+                <li><a onclick="smoothScrollTo('section_6', 2000);" class="db black-50 link hover-mid-gray">Doing Agile</a></li>
+                <li><a onclick="smoothScrollTo('section_7', 2000);" class="db black-50 link hover-mid-gray">Learn Agility</a></li>
+                <li><a onclick="smoothScrollTo('section_8', 2000);" class="db black-50 link hover-mid-gray">Application</a></li>
+                <li><a onclick="smoothScrollTo('section_9', 2000);" class="db black-50 link hover-mid-gray">Agility myth</a></li>
+                <li><a onclick="smoothScrollTo('section_10', 2000);" class="db black-50 link hover-mid-gray">Our answer to prejudices</a></li>
+            </ul>
+        </div>
+        <a id="nav_button" class="dn-l fixed left-1 top-1 f3 z-4">&#9776;</a>
+        <div id="nav_overlay" class="nav_overlay_hidden dn-l fixed w-100 h-100 bg-black-50 z-5"></div>
+        <div class="nav_sidebar nav_sidebar_hidden dn-l h-100 w-70 fixed bg-white z-999">
+            <div class="nav_sidebar_content"></div>
+        </div>
     </nav>
 
     <main id="main_container">
 
-        <section id="content" class="relative z-2">
+        <section id="section_0" id="content" class="relative z-2">
 
             <article class="title vh-100 dt w-100">
               <div class="dtc v-mid tc ph3 ph4-l">
@@ -38,19 +52,19 @@
             </div>
         </article>
 
-        <article class="title vh-100 dt w-100">
+        <article id="section_1" class="title vh-100 dt w-100">
           <div class="dtc v-mid tc ph3 ph4-l">
             <h2 class="f-subheadline-l f2 fw6 tc ttu tracked">
-                Subheadline
+                At Swisscom
             </h2>
         </div>
     </article>
 
-    <article class="content w-100 h-100 ph5-ns ph4 mb7">
+    <article id="section_2" class="content w-100 h-100 ph5-ns ph4 mb7" data-scroll data-scroll-showCallback="morph('chameleon')">
         <div class="mw0 mw7-l center">
             <h4 class="f3 mb5">What do Agility means</h4>
 
-            <p class="lh-copy f4 mb5" data-scroll data-scroll-showCallback="morph('chameleon')" data-scroll-hideCallback="morphPrev('earth')">
+            <p class="lh-copy f4 mb5" data-scroll-hideCallback="morphPrev('earth')">
                 Agility is not a process, it’s the ability to adapt to our complex and fast paced environment.
             </p>
             <p class="lh-copy f6 mb5">
@@ -71,7 +85,7 @@
      </div>
  </article>
 
- <article class="content w-100 h-100 ph5-ns ph4">
+ <article id="section_3" class="content w-100 h-100 ph5-ns ph4">
     <div class="mw0 mw7-l center">
         <h4 class="f3 mb5 lh-copy">
             Why Swisscom needs more agility
@@ -97,7 +111,7 @@
  </div>
 </article>
 
-<article class="title vh-100 dt w-100">
+<article id="section_4" class="title vh-100 dt w-100">
   <div class="dtc v-mid tc ph3 ph4-l">
     <h3 class="f-subheadline-l f2 fw6 tc ttu tracked">
         Both sides<br><br>
@@ -107,7 +121,7 @@
 </div>
 </article>
 
-<article class="content w-100 h-100 fr ph5-ns ph4 mb7">
+<article id="section_5" class="content w-100 h-100 fr ph5-ns ph4 mb7">
     <div class="mw0 mw7-l center">
         <h4 class="f3 mb5 lh-copy">
             Being Agile
@@ -139,7 +153,7 @@
 </div>
 </article>
 
-<article class="content w-100 h-100 fr ph5-ns ph4">
+<article id="section_6" class="content w-100 h-100 fr ph5-ns ph4">
     <div class="mw0 mw7-l center">
         <h4 class="f3 mb5 lh-copy">
             Doing Agile
@@ -171,7 +185,7 @@
 </div>
 </article>
 
-<article class="title vh-100 dt w-100">
+<article id="section_7" class="title vh-100 dt w-100">
   <div class="dtc v-mid tc ph3 ph4-l">
     <h3 class="f-subheadline-l f2 fw6 tc ttu tracked">
         Learn Agility<br><br>
@@ -181,10 +195,10 @@
 </div>
 </article>
 
-<article class="content w-100 h-100 fr ph5-ns ph4" data-scroll data-scroll-showCallback="morph('flower')" data-scroll-hideCallback="morphPrev('cycles')">
+<article id="section_8" class="content w-100 h-100 fr ph5-ns ph4" data-scroll data-scroll-showCallback="morph('flower')" data-scroll-hideCallback="morphPrev('cycles')">
     <div class="mw0 mw7-l center">
         <h4 class="f3 mb5 lh-copy">
-            At Swisscom
+            We already apply Agile methods at different scales.
         </h4>
 
         <p class="lh-copy f4 mb5">
@@ -211,7 +225,7 @@
 </div>
 </article>
 
-<article class="title vh-100 dt w-100">
+<article id="section_9" class="title vh-100 dt w-100">
   <div class="dtc v-mid tc ph3 ph4-l">
     <h3 class="f-subheadline-l f2 fw6 tc ttu tracked" data-scroll data-scroll-showCallback="morph('cyclop')">
         Agility<br><br>
@@ -220,7 +234,7 @@
 </div>
 </article>
 
-<article class="content w-100 h-100 fr ph5-ns ph4">
+<article id="section_10" class="content w-100 h-100 fr ph5-ns ph4">
     <div class="mw0 mw7-l center">
         <p class="lh-copy f4 mb5">
             Don't let the myths win !
