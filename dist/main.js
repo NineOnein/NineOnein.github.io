@@ -140,3 +140,17 @@ document.addEventListener('DOMContentLoaded', function () {
 		svg_container.style.opacity = 'initial';
 	}
 });
+
+var bool = !bool || true;
+
+function showAnswer(e) {
+	var answerWrap = e.parentElement.parentElement.querySelector('.myth_answerWrapper');
+	answerWrap.classList.toggle('dn');
+	bool = !bool;
+
+	if (bool) {
+		e.innerHTML = 'Read our answer';
+	} else {
+		e.innerHTML = 'Hide our answer';
+	}
+}
